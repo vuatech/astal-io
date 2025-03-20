@@ -4,7 +4,6 @@
 
 %global _vpath_srcdir lib/astal/io
 
-%define major 0
 %define libname %mklibname astal-io
 %define devname %mklibname astal-io -d
 
@@ -56,15 +55,11 @@ Development files (Headers etc.) for %{name}.
 %install
 %meson_install
 
-%files
+%files -n %{libname}
 %license LICENSE
 %{_bindir}/astal
-
-
-%files -n %{libname}
-%{_libdir}/*.so.%{major}*
 %{_libdir}/girepository-1.0/AstalIO-0.1.typelib
-
+%{_libdir}/libastal-io.so.0{,.*}
 
 %files -n %{devname}
 %{_datadir}/gir-1.0/AstalIO-0.1.gir
