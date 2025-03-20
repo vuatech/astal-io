@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 %package -n %{libname}
 Summary:    %{summary}
 Group:      System/Libraries
+Provides:   %{libname} = %{EVRD}
 
 %description -n %{libname}
 
@@ -43,11 +44,14 @@ Summary:  Development files for %{name}
 Group:    Development/C
 Requires: %{libname} = %{EVRD}
 
+%global __requires_exclude ^%{_libdir}/lib%{name}\\.so*
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
 
 %prep
 %autosetup -n astal-%{astal_commit} -p1
+
+
 
 %build
 %meson
