@@ -12,7 +12,7 @@ Version:    0~%{bumpver}.git%{astal_shortcommit}
 Release:    1
 Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{name}-%{astal_shortcommit}.tar.gz
 Summary:    Building blocks for creating custom desktop shells
-URL:        https://github.com/astal-io/astal-io
+URL:        https://github.com/aylur/astal-io
 License:    LGPL-2.1-only
 Group:      System/Libraries
 
