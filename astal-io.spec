@@ -34,6 +34,7 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 %package -n %{libname}
 Summary:    %{summary}
 Group:      System/Libraries
+Provides:	%{_libdir}/libastal-io.so.0.1.0()(64bit)
 
 %description -n %{libname}
 
@@ -55,10 +56,12 @@ Development files (Headers etc.) for %{name}.
 %install
 %meson_install
 
-%files -n %{libname}
+%files
 %license LICENSE
 %{_bindir}/astal
 %{_libdir}/girepository-1.0/AstalIO-0.1.typelib
+
+%files -n %{libname}
 %{_libdir}/libastal-io.so.0{,.*}
 
 %files -n %{devname}
