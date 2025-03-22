@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 %global astal_commit 69efb4c91e590adcb5a3d8938454f987982e3891
 %global astal_shortcommit %(c=%{astal_commit}; echo ${c:0:7})
 %global bumpver 1
