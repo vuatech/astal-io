@@ -12,7 +12,7 @@ Version:    0~%{bumpver}.git%{astal_shortcommit}
 Release:    1
 Source0:    https://github.com/aylur/astal/archive/%{astal_commit}/%{name}-%{astal_shortcommit}.tar.gz
 Summary:    Building blocks for creating custom desktop shells
-URL:        https://github.com/aylur/astal
+URL:        https://github.com/aylurs/astal
 License:    LGPL-2.1-only
 Group:      System/Libraries
 
@@ -49,8 +49,6 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %autosetup -n astal-%{astal_commit} -p1
-
-
 
 %build
 %meson
